@@ -5,10 +5,13 @@ import Header from './global/Header/Header';
 import './Style/index.sass'
 import  './Style/normalize.css';
 import {BrowserRouter,Routes,Route,} from "react-router-dom";
+import Preloader from './global/Preloader/Preloader';
+
 function App() {
   return (
     <div  className="container">
       <Header/>
+      <Preloader/>
           <Routes>
             <Route path="/home" element={<Home />}/>
             <Route path="/statistic" element={<Statistic/>}/>
