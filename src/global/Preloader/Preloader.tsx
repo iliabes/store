@@ -7,7 +7,7 @@ import PacmanLoader from "react-spinners/PacmanLoader"
 export default function Preloader() { 
     let [loading, setLoading] = useState(true);
     useEffect(() => {
-      window.addEventListener('load',()=>{setLoading(false)})
+      setTimeout(()=>{setLoading(false)},1000)
       },[]);
 
     return (

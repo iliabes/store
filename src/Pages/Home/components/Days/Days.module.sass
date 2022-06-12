@@ -1,0 +1,59 @@
+@import '../../../../Style/variable' 
+  
+.days_wrapper
+  width: 1250px
+  padding: 20px
+  .days
+    margin: 0
+    box-sizing: border-box
+    border-radius: $bordRds
+    background-color: $bg
+    box-shadow: $box-shadow
+    .filter
+      padding-top: 10px
+      display: flex
+      justify-content: space-between
+      border-radius: $bordRds
+      background-color: $bg
+      button
+        padding: 20px 9px
+        font-weight: 400
+        font-size: 18px
+        margin: 0 15px
+        border: none
+      .button active
+        background-color: $primary
+      .filter_wrapper
+          display: flex
+          justify-content: space-between
+
+    .days_wrapper
+      width: 100%
+      display: flex
+      justify-content: space-between
+      .day
+        padding: 10px
+        background-color: $bgBlue
+        border-radius: 5px
+        width: 150px
+        display: flex
+        flex-direction: column
+        color: $secondary
+        .day_day
+          color: $dark
+          font-size: 18px
+          font-weight: 500
+          margin-bottom: 0
+        .day_info
+          font-size: 14px
+        .temp_day
+          margin-top: 20px
+          margin-bottom: 5px
+          font-size: 18px
+          color: $dark
+        .temp_night
+          margin-top: 3px
+          font-size: 16px
+        .info
+          font-size: 14px
+          margin-bottom: 0
