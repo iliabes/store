@@ -1,6 +1,5 @@
 import sl from './Header.module.sass'
-import Logo from '../../assets/icon/logo.webp';
-import DarkMode from '../../assets/icon/darkMode.webp';
+
 import Select from 'react-select'
 import GenerateSvg from '../GenerateSvg/GenerateSvg';
 

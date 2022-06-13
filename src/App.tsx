@@ -4,11 +4,14 @@ import Statistic from './Pages/Statistic/Statistic';
 import Header from './global/Header/Header';
 import './Style/index.sass'
 import  './Style/normalize.css';
-import {BrowserRouter,Routes,Route,} from "react-router-dom";
+import {Routes,Route,} from "react-router-dom";
 import Preloader from './global/Preloader/Preloader';
+import { Provider } from 'react-redux'
+import {store} from './store/store';
 
 function App() {
   return (
+    <Provider store={store}>
     <div  className="container">
       <Header/>
       <Preloader/>
@@ -18,6 +21,7 @@ function App() {
           </Routes>
 
     </div>
+    </Provider>
   );
 }
 
