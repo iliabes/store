@@ -1,23 +1,34 @@
 import GenerateSvg from '../../../../global/GenerateSvg/GenerateSvg';
 import s from  './WeatherToday.module.sass'
+import {Weather} from '../../../../store/type'
+
+interface Props{
+  weather: Weather
+}
 
 
 
-export default function WeatherToday() { 
 
+export default function WeatherToday({ weather }:Props) { 
+  const now = new Date();
+  let min: string | number = now.getMinutes()
+  if(min < 10){min = '0' + min}
+  const hour = now.getHours()
 
+  
     return (
       <div className={s.WeatherToday}>
+        <div className={s.background_transparent}></div>
         <div className={s.block_top}>
           <div className={s.block_top_wrapper}>
-            <div className={s.taday_temperature}>20°</div>
+            <div className={s.taday_temperature}>{Math.floor(weather.main.temp)}</div>
             <div className={s.day}>Сегодня</div>
           </div>
           <GenerateSvg className={s.weatherImg} id="sun"/>
         </div>
         <div className={s.block_bottom}>
-          <div className={s.block_bottom_taim}>Время: 15:09</div>
-          <div className={s.block_bottom_town}>Город: Москва</div>
+          <div className={s.block_bottom_taim}>Время: {hour +':' +min}</div>
+          <div className={s.block_bottom_town}>Город: Нижний Тагил</div>
         </div>
       </div>
     );

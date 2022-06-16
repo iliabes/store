@@ -7,7 +7,7 @@ interface Props {
 }
 
 export default function WeatherTodayItem({item}:Props) { 
-  console.log(item);
+  
 
 
     return ( 

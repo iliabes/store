@@ -1,4 +1,4 @@
-import { WeatherService } from "../services/services"
+import { WeatherService, WeatherServiceWeek } from "../services/services"
 import { CurrentWeatherSlice } from "../slice/slice"
 import { AppDispath } from "../store/store"
 
@@ -18,3 +18,5 @@ export const fetchCurrentWeather = (payload:string)=> {
         }
     }
 }
+
+

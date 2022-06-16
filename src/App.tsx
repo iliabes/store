@@ -8,15 +8,17 @@ import {Routes,Route,} from "react-router-dom";
 import Preloader from './global/Preloader/Preloader';
 import { Provider } from 'react-redux'
 import {store} from './store/store';
+import Background from './global/Background/Background';
 
 function App() {
   return (
     <Provider store={store}>
     <div  className="container">
       <Header/>
+      <Background/>
       <Preloader/>
           <Routes>
-            <Route path="/home" element={<Home />}/>
+            <Route path="/" element={<Home />}/>
             <Route path="/statistic" element={<Statistic/>}/>
           </Routes>
 

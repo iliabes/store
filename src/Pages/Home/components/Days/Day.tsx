@@ -9,7 +9,7 @@ interface Props {
 
 
 export default function Day({item}:Props) { 
-  console.log(item);
+
   
 
     return (

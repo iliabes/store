@@ -4,12 +4,22 @@
   max-width: 400px
   height: 300px
   padding: 20px
-  background-color: $bg
   box-shadow: $box-shadow
   border-radius: $bordRds
   display: flex
   flex-direction: column
   justify-content: space-between
+  position: relative
+  .background_transparent
+      background-color: $bg
+      opacity: 0.2
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      position: absolute
+      z-index: -1
+
   .block_top
     display: flex
     justify-content: space-between

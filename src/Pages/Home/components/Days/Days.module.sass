@@ -3,34 +3,49 @@
 .days_wrapper
   width: 1250px
   padding: 20px
+  position: relative
+  overflow: hidden
+  border-radius: $bordRds
+  box-shadow: $box-shadow
+  .background_transparent
+    background-color: $bg
+    opacity: 0.2
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    position: absolute
+    z-index: -1
   .days
     margin: 0
     box-sizing: border-box
-    border-radius: $bordRds
-    background-color: $bg
-    box-shadow: $box-shadow
+
+   
     .filter
       padding-top: 10px
       display: flex
       justify-content: space-between
       border-radius: $bordRds
-      background-color: $bg
+
       button
         padding: 20px 9px
         font-weight: 400
         font-size: 18px
-        margin: 0 15px
+        margin-right: 15px
+        margin-bottom: 5px
         border: none
+        border-radius: 10px
       .button active
         background-color: $primary
       .filter_wrapper
           display: flex
           justify-content: space-between
 
-    .days_wrapper
+    .days_days_wrapper
       width: 100%
       display: flex
       justify-content: space-between
+
       .day
         padding: 10px
         background-color: $bgBlue
