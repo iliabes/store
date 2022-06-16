@@ -142,7 +142,7 @@ let wetherTest:any = [
   }
 ]
 
-console.log(getIcon(appContext[0].icon),'icon');
+
 
 
 
