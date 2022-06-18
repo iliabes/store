@@ -10,7 +10,12 @@ interface Props {
 
 export default function Day({item}:Props) { 
 
-  
+  function upperCaseFirstLetter(name:string){
+     const result = name.charAt(0).toUpperCase() + name.slice(1)
+
+     return result
+  }
+
 
     return (
       <div className={s.day}>
@@ -19,7 +24,7 @@ export default function Day({item}:Props) {
       <GenerateSvg id={item.icon_id}/>
       <p className={s.temp_day}>{item.temp_day}</p>
       <p className={s.temp_night}>{item.temp_night}</p>
-      <p className={s.info}>{item.info}</p>
+      <p className={s.info}>{upperCaseFirstLetter(item.info)}</p>
       </div>
     );
 }

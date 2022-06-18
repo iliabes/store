@@ -209,7 +209,7 @@ let wetherTest:any = [
       <div className={s.days_wrapper}>
         <div className={s.background_transparent}></div>
         <div className={s.days}>
-          <Filter/>
+          {/* <Filter/> */}
           <div className={s.days_days_wrapper}>
           {weather.map((item:IDayWether,index)=>(<Day key={index} item={item}/>))}
           </div>
@@ -221,7 +221,7 @@ let wetherTest:any = [
       <div className={s.days_wrapper}>
         <div className={s.background_transparent}></div>
         <div className={s.days}>
-          <Filter/>
+          {/* <Filter/> */}
           <div className={s.days_days_wrapper}>
           {wetherTest.map((item:IDayWether,index:any)=>(<Day key={index} item={item}/>))}
           </div>

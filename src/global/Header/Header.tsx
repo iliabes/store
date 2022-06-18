@@ -45,10 +45,10 @@ function Header() {
             <p>Weather online</p>
 
         </div>
-        <div className={sl.wrapper}>
+        {/* <div className={sl.wrapper}>
             <Select  className={sl.select} classNamePrefix='castomSelect' styles={customStyles}  options={options} />
             <GenerateSvg className={sl.dark}   id={'darkmode'}/>
-        </div>
+        </div> */}
     </header>
   );
 }

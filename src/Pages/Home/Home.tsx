@@ -25,8 +25,7 @@ function Home() {
   useEffect(()=>{
     async function getUser() {
       try {
-        const response = await axios.get('https://api.openweathermap.org/data/2.5/onecall?lat=56.83&units=metric&lon=-60.60&lang=ru&exclude=minutely,hourly&appid=2607112734128ccb8b24ee86e9d33c4f');
-      
+        const response = await axios.get('https://api.openweathermap.org/data/2.5/onecall?lat=57.83&units=metric&lon=60.60&lang=ru&exclude=minutely,hourly&appid=2607112734128ccb8b24ee86e9d33c4f');
         weatherWeek = response.data.daily
         // console.log(weatherWeek);
         
@@ -71,7 +70,9 @@ function Home() {
         <WeatherTodoayInfo weather={weather}/>
         
       </div>
+      <div className={s.home_wrapper}>
       <Days arrWeek={week} />
+      </div>
     </div>
     </AppCtx.Provider>
   );

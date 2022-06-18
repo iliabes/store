@@ -27,8 +27,8 @@ export default function WeatherToday({ weather }:Props) {
           <GenerateSvg className={s.weatherImg} id="sun"/>
         </div>
         <div className={s.block_bottom}>
-          <div className={s.block_bottom_taim}>Время: {hour +':' +min}</div>
-          <div className={s.block_bottom_town}>Город: Нижний Тагил</div>
+          <div className={s.block_bottom_taim}>Время: <p className={s.time}>{hour +':' +min}</p></div>
+          <div className={s.block_bottom_town}>Город: <p className={s.town}>Нижний Тагил</p></div>
         </div>
       </div>
     );

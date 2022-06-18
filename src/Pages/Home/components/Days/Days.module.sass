@@ -1,15 +1,16 @@
 @import '../../../../Style/variable' 
   
 .days_wrapper
-  width: 1250px
+  width: 100%
   padding: 20px
   position: relative
   overflow: hidden
   border-radius: $bordRds
   box-shadow: $box-shadow
   .background_transparent
-    background-color: $bg
-    opacity: 0.2
+    background-color: #123343
+ 
+    opacity: 0.3
     width: 100%
     height: 100%
     top: 0
@@ -19,14 +20,11 @@
   .days
     margin: 0
     box-sizing: border-box
-
-   
     .filter
       padding-top: 10px
       display: flex
       justify-content: space-between
       border-radius: $bordRds
-
       button
         padding: 20px 9px
         font-weight: 400
@@ -54,11 +52,13 @@
         display: flex
         flex-direction: column
         color: $secondary
+  
         .day_day
           color: $dark
           font-size: 18px
           font-weight: 500
           margin-bottom: 0
+
         .day_info
           font-size: 14px
         .temp_day
@@ -70,5 +70,51 @@
           margin-top: 3px
           font-size: 16px
         .info
-          font-size: 14px
+          font-size: 16px
           margin-bottom: 0
+          text-align: start
+          color: #fff
+
+
+
+
+
+@media (min-width: 992px) and (max-width: 1199px) 
+  .days_wrapper .days .days_days_wrapper  .day 
+    padding: 5px
+    width: 120px
+
+@media (min-width: 768px) and (max-width: 991px)
+  .days_wrapper .days .days_days_wrapper  
+    .day 
+      padding: 2px
+      width: 92px
+      .day_day
+        font-size: 13px
+      .info
+        font-size: 12px
+
+@media (min-width: 574px) and (max-width: 768px)
+  .days_wrapper .days .days_days_wrapper  
+    .day 
+      padding: 2px
+      width: 67px
+      .day_day
+        font-size: 13px
+      .info
+        font-size: 12px
+
+
+@media  (max-width: 573px)
+  .days_wrapper .days 
+    .days_days_wrapper  
+      flex-direction:  row
+      flex-wrap: wrap
+      .day 
+        margin-bottom: 10px
+        padding: 2px
+        width: 45%  
+        .day_day
+          font-size: 13px
+        .info
+          font-size: 12px

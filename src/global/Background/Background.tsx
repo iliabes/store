@@ -3,7 +3,7 @@ import { useState,useEffect,useRef } from 'react';
 
 
 import s from './Background.module.sass'
-import img from '../../assets/img/1.jpg'
+import img from '../../assets/img/home.webp'
 
 
 interface Ibg{
