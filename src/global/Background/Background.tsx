@@ -4,6 +4,8 @@ import { useState,useEffect,useRef } from 'react';
 
 import s from './Background.module.sass'
 import img from '../../assets/img/home.webp'
+import light from '../../assets/img/light.jpg'
+import dark from '../../assets/img/dark.jpg'
 
 
 interface Ibg{
@@ -30,7 +32,8 @@ export default function Background() : JSX.Element{
 
     return (
         <div   id='bg' className={s.Background}>
-          <img ref={refImg}  src={img} alt="" />
+          <img  src={light} alt="" />
+          <img   src={dark} alt="" />
         </div>
     );
 }

@@ -1,6 +1,6 @@
 
 export interface StandardComponentProps {
-  id: string
+  id: any
   className?: string
 }
 

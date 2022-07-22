@@ -12,6 +12,7 @@ import Background from './global/Background/Background';
 
 function App() {
   return (
+    
     <Provider store={store}>
     <div  className="container">
       <Header/>

@@ -1,0 +1,97 @@
+@import '../../Style/var.sass'
+    
+.PopUp
+    background-color: var(--bg-default)
+    opacity: 1
+    position: absolute
+    display: flex
+    flex-direction: column
+    z-index: 999
+    border: 1px solid #080c37
+    border-radius: 10px
+    width:  40%
+    height: 40%
+    justify-content: space-around
+    justify-content: start
+    // padding: 1vw
+    transition: .3s
+    margin: auto
+    position: absolute
+    top: -20%
+    left: 0
+    bottom: 0
+    right: 0
+    .btn-popup
+        position: absolute
+        top: -1px
+        right:  -1px
+        height: 30px
+        width:  30px
+        border-radius: 7px
+    .popup-top-cont
+        display: flex
+        justify-content: start
+        border-bottom: 1px solid #000
+        margin-bottom: 10px
+        padding: 0 10px
+        .title-day
+            font-size: 22px
+            font-weight: bold
+            color: var(--color-default)
+            
+    .item
+        margin-top: 2%
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        padding: 0 10px
+        .title-item-cont
+            display: flex
+            justify-content: space-around
+            align-items: start
+            min-width: 30%
+            .title-item
+                color: var(--color-default)
+                align-items: end
+                margin-left: 15px
+        svg
+            height: 50px
+            width: 50px
+        .item-text
+            font-size: 18px
+            color: var(--color-default)
+
+
+
+.PopUpNone
+    transform: translateY(1500px)
+
+
+
+@media (max-width: 768px)
+    .PopUp
+        width:  70%
+        height: 35%
+
+
+@media (max-width: 573px)
+    .PopUp
+        width:  91%
+        height: 50%
+
+
+@media (max-width: 480px)
+    .PopUp
+        width:  91%
+        height: 50vh
+
+
+@media (max-width: 400px)
+    .PopUp
+        width:  91%
+        height: 45vh
+
+
+
+
+

@@ -7,15 +7,19 @@
     display: flex
     align-items: center
     justify-content: space-around
-    border-radius: 10px
-    border-radius: $bordRds
-    box-shadow: $box-shadow
+    border-radius: 20px
+    box-shadow: 5px 2px 5px #303846
+    box-shadow: 5px 2px 5px var(--shadow-default)
     flex-direction: column
     width: 750px
     position: relative
     overflow: hidden
+    transition: 1s
+    &:hover
+      border: 1px solid gold
+      transform: translateY(-5px)
     .background_transparent
-      background-color: #123343
+      background-color: var(--bg-default)
       opacity: 0.3
       opacity: 0.2
       width: 100%
@@ -31,7 +35,6 @@
 
 @media  (max-width: 1100px) 
   .WeatherTodoayInfo
-
     max-width: 65%
 
 
@@ -42,12 +45,13 @@
 
 
 @media (min-width: 576px) and (max-width: 767px)
-  .WeatherToday
+  .WeatherTodoayInfo
     max-width: 90%
 
 @media (max-width: 574px)
   .WeatherTodoayInfo
     max-width: 90%
+    display: none
 
 
 

@@ -1,3 +1,5 @@
+@import '../../Style/var.sass'
+    
 .header
     height: 100px
     display: flex
@@ -7,18 +9,15 @@
     padding: 15px
     box-sizing: border-box
     .wrapper
-       display: flex
-       align-items: center
-       .select
-           height: 40px
-           width: 197px
-
-// 
-
-    svg
-        color: #692a2a
-        height: 40px
-        width: 40px
+        display: flex
+        align-items: center
+        svg
+            color: #e11313 !important
+            height: 40px
+            width: 40px
+            background-color: var(--icon-default)
+            border-radius:  20px
+             
 
 
 @media (min-width: 574px) and (max-width: 767px)

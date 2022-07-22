@@ -1,15 +1,17 @@
-@import '../../../../Style/variable' 
+
   
 .days_wrapper
   width: 100%
   padding: 20px
   position: relative
-  overflow: hidden
-  border-radius: $bordRds
-  box-shadow: $box-shadow
+  border-radius: 20px
+  box-shadow: 5px 2px 5px #303846
+  box-shadow: 5px 2px 5px var(--shadow-default)
+  transition: 1s
+
+  
   .background_transparent
-    background-color: #123343
- 
+    background-color: var(--bg-default)
     opacity: 0.3
     width: 100%
     height: 100%
@@ -17,6 +19,7 @@
     left: 0
     position: absolute
     z-index: -1
+    border-radius: 5px
   .days
     margin: 0
     box-sizing: border-box
@@ -24,56 +27,60 @@
       padding-top: 10px
       display: flex
       justify-content: space-between
-      border-radius: $bordRds
+      border-radius: 20px
       button
         padding: 20px 9px
         font-weight: 400
         font-size: 18px
         margin-right: 15px
-        margin-bottom: 5px
         border: none
         border-radius: 10px
       .button active
-        background-color: $primary
+        background-color: #4793FF
       .filter_wrapper
           display: flex
           justify-content: space-between
-
-    .days_days_wrapper
+    .week_day_wrapper
       width: 100%
       display: flex
       justify-content: space-between
-
-      .day
+      .week_day
         padding: 10px
-        background-color: $bgBlue
-        border-radius: 5px
+        // border-radius: 5px
         width: 150px
         display: flex
         flex-direction: column
-        color: $secondary
-  
+        color: var(--color-default)
+        transition: 1s
+        &:hover
+          border-top: 1px solid gold
+          transform: translateY(-5px)
         .day_day
-          color: $dark
+          color: #303846
           font-size: 18px
           font-weight: 500
           margin-bottom: 0
-
+          color: var(--colorTitle-default)
+          transition: 1s
         .day_info
           font-size: 14px
         .temp_day
+
           margin-top: 20px
           margin-bottom: 5px
-          font-size: 18px
-          color: $dark
+          font-size: 20px
+          color: #303846
+          color: var(--colorTitle-default)
         .temp_night
           margin-top: 3px
-          font-size: 16px
+          font-size: 14px
+          color: var(--color-default)
         .info
           font-size: 16px
           margin-bottom: 0
           text-align: start
           color: #fff
+          color: var(--color-default)
 
 
 
@@ -106,15 +113,31 @@
 
 
 @media  (max-width: 573px)
-  .days_wrapper .days 
-    .days_days_wrapper  
-      flex-direction:  row
-      flex-wrap: wrap
-      .day 
-        margin-bottom: 10px
-        padding: 2px
-        width: 45%  
-        .day_day
-          font-size: 13px
-        .info
-          font-size: 12px
+  .days_wrapper 
+    // height: 150px
+    border-radius: 5px
+    padding: 1px
+    justify-content: start
+    .days
+      width: 97%
+      
+      .week_day_wrapper
+        
+        flex-wrap: wrap
+        .week_day
+          margin: 5px
+          height: 22vh
+          width: 18vw
+          border: 1px solid #fff
+          .temp_night
+            margin-bottom: 0
+          .day_day
+            margin-bottom: 4px
+            font-size: 9px
+            font-weight: 300
+          .day_info
+            font-size: 10px
+
+          .info
+            font-size: 9px
+      

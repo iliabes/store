@@ -1,43 +1,31 @@
 import sl from './Header.module.sass'
-
-import Select from 'react-select'
 import GenerateSvg from '../GenerateSvg/GenerateSvg';
-
-const options = [
-  { value: 'citi_01', label: 'Tagil' },
-  { value: 'citi_01', label: 'Ekat' },
-  { value: 'citi_01', label: 'Moskow' }
-]
-
-const customStyles = {
-  option: (provided:any, state:any) => ({
-    ...provided,
-    borderBottom: '1px dotted blue  ',
-    color: 'black',
-    padding: 20,
-  }),
-  control: (styles  : any) => ({
-    ...styles,
-    width: '192px',
-    height: '40px',
-    border: 'none',
-    borderRadius: '10px',
-    zIndex:100
-  }),  
-  singleValue: (provided: any, state: any) => {
-    const opacity = state.isDisabled ? 0.5 : 1;
-    const transition = 'opacity 300ms';
-    return { ...provided, opacity, transition };
-  },
-
-}
+import { useEffect, useState } from 'react';
 
 
-const getValue = ()=>{
-  console.log('seda')
-}
+
+
+
+
 
 function Header() {
+  let [theme, setTheme] = useState('light')
+
+  const darkMode = ()=>{
+    setTheme(theme === 'light' ? 'dark' : 'light')
+
+  }
+
+  useEffect(()=>{
+    const root = document.querySelector(':root') as HTMLElement
+    root.style.setProperty('--bg-default',`var(--bg-${theme})`)
+    root.style.setProperty('--shadow-default',`var(--shadow-${theme})`)
+    root.style.setProperty('--img-default',`var(--img-${theme})`)
+    root.style.setProperty('--color-default',`var(--color-${theme})`)
+    root.style.setProperty('--icon-default',`var(--icon-${theme})`) 
+    root.style.setProperty('--colorTitle-default',`var(--colorTitle-${theme})`)
+  },[theme])
+
   return (
     <header className={sl.header}>
         <div className={sl.wrapper}>
@@ -45,10 +33,11 @@ function Header() {
             <p>Weather online</p>
 
         </div>
-        {/* <div className={sl.wrapper}>
-            <Select  className={sl.select} classNamePrefix='castomSelect' styles={customStyles}  options={options} />
-            <GenerateSvg className={sl.dark}   id={'darkmode'}/>
-        </div> */}
+        <div className={sl.wrapper}>
+            <div onClick={darkMode} className={sl.dark_mode}>
+            <GenerateSvg  className={sl.dark}   id={'darkmode'}/>
+            </div>
+        </div>
     </header>
   );
 }

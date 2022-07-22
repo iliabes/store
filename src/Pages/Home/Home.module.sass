@@ -1,6 +1,7 @@
 .home
     display: flex
     flex-direction: column
+    position: relative
     .home_wrapper
         padding: 20px
         display: flex
@@ -11,6 +12,10 @@
         padding: 4px
 
 @media (max-width: 573px)
-    .home .home_wrapper
+    .home 
+        justify-content: space-between
+        .home_wrapper
+        padding: 2px
         flex-direction: column
         justify-content: space-between
+        
